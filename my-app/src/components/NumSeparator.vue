@@ -1,6 +1,7 @@
 <template>
   <div>
     <form action="">
+      <h2>{{ module }}</h2>
       <input type="text" v-model.number="from">から
       <input type="text" v-model.number="to">までをカンマ区切りで出力
       <br>
@@ -12,6 +13,9 @@
 <script>
   export default {
     name: "NumSeparator",
+    props: {
+      module: ''
+    },
     data: function() {
       return {
         from: '',
